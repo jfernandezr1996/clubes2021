@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 from functions import *
 
 st.title('Welcome to  clubes2021! :wave:')
-st.write(':calendar: *Update date: 09/02/2021*')
+st.write(':calendar: *Update date: 08/03/2021*')
 
 def load_data(ruta, encoding):
     return pd.read_csv(ruta, sep=";", encoding=encoding)
@@ -28,7 +28,7 @@ def color_percentiles(val):
 
 def main():
     
-    df = load_data('data/FBREF_clubes2020_StatsFilter.csv', encoding='latin')
+    df = load_data('data/FBREF_clubes2020_data.csv', encoding='latin')
     df_description_metrics = load_data('data/summarize_field.csv', encoding='latin')
     df_description_metrics.index = df_description_metrics['Original']
     dict_description_metrics = df_description_metrics['Description'].to_dict()
